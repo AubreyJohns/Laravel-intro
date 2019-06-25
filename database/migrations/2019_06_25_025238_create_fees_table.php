@@ -15,7 +15,7 @@ class CreateFeesTable extends Migration
     {
         Schema::create('fees', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('amount');
+            $table->integer('amount');
             $table->string('paid_on');
             $table->integer('student_id');
             $table->foreign('student_id')->references('id')->on('students');
