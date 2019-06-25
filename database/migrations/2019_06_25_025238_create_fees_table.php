@@ -18,7 +18,6 @@ class CreateFeesTable extends Migration
             $table->integer('amount');
             $table->string('paid_on');
             $table->integer('student_number')->unsigned()->index();
-            $table->unique('student_number');
             $table->foreign('student_number')->references('student_number')->on('students');
             $table->timestamps();
         });
