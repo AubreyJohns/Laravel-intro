@@ -24,12 +24,12 @@ class FeeController extends Controller
     {
         //Validate
         $request->validate([
-            'student_id' => 'required|min:3',
+            'student_number' => 'required|min:3',
             'amount' => 'required',
             'paid_on' => 'required',
         ]);
 
-        $fee = Fee::create(['student_id' => $request->student_id,'amount' => $request->amount,'paid_on' => $request->paid_on]);
+        $fee = Fee::create(['student_number' => $request->student_number,'amount' => $request->amount,'paid_on' => $request->paid_on]);
         return redirect('/fees/');
     }
 

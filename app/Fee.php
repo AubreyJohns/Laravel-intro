@@ -8,11 +8,11 @@ class Fee extends Model
 {
 
     protected $casts = [
-        'student_id'=>'integer',
+        'student_number'=>'integer',
         'amount'=>'integer',
         'paid_on'=>'string'
     ];
-    protected $fillable = ['student_id','amount','paid_on'];
+    protected $fillable = ['student_number','amount','paid_on'];
     public function student()
     {
         return $this->belongsTo('App\Student');

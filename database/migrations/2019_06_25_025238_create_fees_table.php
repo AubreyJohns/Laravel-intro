@@ -17,9 +17,9 @@ class CreateFeesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('amount');
             $table->string('paid_on');
-            $table->integer('student_id')->unsigned()->index();
-            $table->unique('student_id');
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->integer('student_number')->unsigned()->index();
+            $table->unique('student_number');
+            $table->foreign('student_number')->references('student_number')->on('students');
             $table->timestamps();
         });
     }
