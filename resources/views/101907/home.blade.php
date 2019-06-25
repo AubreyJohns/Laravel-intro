@@ -85,9 +85,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://localhost/IAPcat2/laravel/public/student">Student</a>
-                    <a href="http://localhost/IAPcat2/laravel/public/fees">Fees</a>
-                    <a href="http://localhost/IAPcat2/laravel/public/amount">Amount Paid</a>
+                    <a href="{{ url('/student') }}"><b>Student</b></a>
+                    <a href="{{ url('/fees') }}"><b>Fees</b></a>
+                    <a href="{{ url('/amount') }}"><b>Amount</b></a>
                 </div>
             </div>
         </div>
