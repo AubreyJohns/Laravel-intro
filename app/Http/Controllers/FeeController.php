@@ -37,10 +37,10 @@ class FeeController extends Controller
     {
         //Validate
         $request->validate([
-            'student_id' => 'required|min:3',
+            'student_number' => 'required|min:3',
         ]);
-        $fees=Fee::where('student_id',$request->student_id)->get(['student_id','amount','paid_on']);
-        $amount=Fee::where('student_id',$request->student_id)->sum('amount');
+        $fees=Fee::where('student_number',$request->student_number)->get(['student_number','amount','paid_on']);
+        $amount=Fee::where('student_number',$request->student_number)->sum('amount');
         return view('101907.studentFees',['fees'=>$fees],['amount'=>$amount]);
     }
 }

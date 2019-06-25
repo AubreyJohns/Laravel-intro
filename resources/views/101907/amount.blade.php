@@ -63,8 +63,8 @@
         <form action="{{ route('AmountAction') }}" method="get">
      {{ csrf_field() }}
       <div class="form-group">
-        <label for="student_id">Student id</label>
-        <input type="text" class="form-control" id="student_id"  name="student_id">
+        <label for="student_number">Student Number</label>
+        <input type="text" class="form-control" id="student_number"  name="student_number">
       </div>
       @if ($errors->any())
         <div class="alert alert-danger">

@@ -59,7 +59,7 @@
           <tbody>
           @foreach ($fees as $fee)
             <tr>
-              <td>{{$fee->student_id}}</td>
+              <td>{{$fee->student_number}}</td>
               <td>{{$fee->amount}}</td>
               <td>{{$fee->paid_on}}</td>
             </tr>
